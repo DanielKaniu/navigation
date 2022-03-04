@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 
+        The tile of your project -->
+        <title>Navigator</title>
+        
+        <!--
+        Add the styling file. -->
+        <link rel="stylesheet" href="step.css"/>
+
+        <script type="module">
+            //
+            //Import the test class.
+            import {navigator} from "./navigator.js";
+            //
+            //Launch the test class when the window loads.
+            window.onload = async () => {
+                //
+                //Call the method that runs the test simulation.
+                navigator.current_app = new navigator();
+                await navigator.current_app.show_panels();
+            };
+        </script>
+    </head>
+
+    <body>
+        <div id="header">
+            <div id="company">
+                Header
+            </div>
+        </div>
+        <!--
+        Steps. -->
+        <div id="steps_title">
+            Steps
+        </div>
+        <div id="steps">
+            
+        </div>
+        <!--
+        Collectable title.-->
+        <div id="collectable_title">
+            Collectables
+        </div>
+        <!--
+        Collectable.-->
+        <div id="collectable">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!--
+        Terms. -->
+        <div id="terms_title">
+            Terms
+        </div>
+        <div id="terms"></div>
+        <!--
+        User inputs. -->
+        <div id="ui_title">
+            User Inputs
+        </div>
+        <div id="interactions"></div>
+        <div id="btns">
+            <input type="button" id="prev" value="Previous"/>
+            <input type="button" id="next" value="Next"/>
+            <input type="button" id="cancel" value="Cancel"/>
+        </div>
+    </body>
+</html>

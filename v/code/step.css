@@ -1,0 +1,194 @@
+html {
+    height: 100vh;
+    width: 100vw;
+}
+/*Grid design and styling procedure*/
+body {
+    font-weight: bolder;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    display: grid;
+    gap: 1.5px;
+    grid-template-columns: 20% 30% 50%;
+    grid-template-rows: 10% 5% 35% 5% 35% 10%;
+    grid-template-areas:
+        "header header header"
+        "steps_title ui_title terms_title"
+        "steps interactions terms"
+        "collectable_title interactions terms"
+        "collectable interactions terms"
+        "collectable btns terms";
+}
+/*
+Style the all the boxes. */
+*{
+    border-radius: 5px;
+}
+/*
+Style the scrollbar for all elements with overflow attribute. */
+*::-webkit-scrollbar {
+    /* 
+    Width of the entire scrollbar. */
+    width: 10px;
+}
+*::-webkit-scrollbar-track {
+    /* 
+    Color of the tracking area. */
+    background: #ebebeb;
+}
+
+*::-webkit-scrollbar-thumb {
+    /* 
+    Roundness of the scroll thumb. */
+    border-radius: 20px;
+    /* 
+    Creates a border width around scroll thumb. */
+    border: 3px solid skyblue;
+}
+#steps_title{
+    grid-area: steps_title;
+    background-color: skyblue;
+}
+#collectable_title{
+    grid-area: collectable_title;
+    background-color: skyblue;
+}
+#ui_title{
+    grid-area: ui_title;
+    background-color: skyblue;
+}
+#btns{
+    grid-area: btns;
+    background-color: skyblue;
+    margin-top: 0%;
+}
+#terms_title{
+    grid-area: terms_title;
+    background-color: skyblue;
+}
+
+#header {
+    grid-area: header;
+    display: grid;
+    background-color: lightblue;
+}
+#company{
+    grid-row: header;
+    font-weight: bold;
+    font-size: 35px;
+    place-self: center;
+    padding-right: 50%;
+}
+.heading {
+    grid-row: header;
+}
+#steps {
+    grid-area: steps;
+    background-color: lightblue;
+    overflow: scroll;
+    overflow-x: hidden;
+    pointer-events:none;
+}
+#collectable {
+    grid-area: collectable;
+    background-color: lightblue;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#terms {
+    grid-area: terms;
+    background-color:#ececf6;
+    overflow:scroll;
+}
+#interactions {
+    grid-area: interactions;
+    background-color: lightgoldenrodyellow;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.footer {
+    grid-area: footer;
+    background-color: lightblue;
+}
+label{
+    display: block;
+}
+.disabled{
+    pointer-events:none;
+}
+.enabled{
+    pointer-events: all;
+}
+tr:nth-child(even) {
+    background-color: lightcyan;
+}
+table, td, th {
+    border: 0.5px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+/*
+Indent the response for the yes radio button */
+#yes{
+    margin-left: 5px;
+}
+#sender{
+    background-color: lightgray;
+    border-radius: 5px;
+}
+/*
+*/
+#date{
+    font-style: italic;
+    font-size: 15px;
+    background-color: rgb(204, 197, 197);
+    border-radius: 5px;
+    margin-bottom: 7px;
+}
+/*
+Style the whole message */
+#message{
+    background-color: lightblue;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+/*
+Highlight the keyword in a message. */
+.word{
+    background-color: lightsalmon;
+}
+/*
+Style the terms translations. */
+.words{
+    font-style: italic;
+    font-weight: 100;
+}
+/*
+Style the words' spinner'. */
+.words_ {
+    color: skyblue;
+    margin-top: 40vh;
+    margin-left: 40%;
+}
+/*
+Style the interactions spinner. */
+.interactions_ {
+    color: skyblue;
+    margin-top: 10vh;
+    margin-left: 40%;
+}
+/*
+Style the elements used to search if a word is linked to a term. */
+#search, #searching{
+    width: 20vw;
+}
+/*
+The class for each step in the translation stage. */
+.highlighted{
+    background-color: yellow;
+}
