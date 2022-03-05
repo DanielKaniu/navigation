@@ -3,7 +3,7 @@
 import { step } from "./step.js";
 //
 //Import app from the outlook library.
-import * as outlook from "../../../outlook/v/code/outlook.js";
+import * as outlook from "../../../outlook/kaniu/code/outlook.js";
 //
 //Take the user forward/backward as s/he uses the application.
 export class navigator extends outlook.baby {
@@ -33,14 +33,14 @@ export class navigator extends outlook.baby {
         //
         //Initialize the steps array.
         navigator.steps_array = [
-            new step('provide_word', this),
-            new step('correct_spelling', this),
-            new step('provide_meaning', this),
-            new step('provide_derivative', this),
-            new step('provide_present', this),
-            new step('provide_singular', this),
-            new step('select_term', this),
-            new step('new_word', this)
+            new step('step_one', this),
+            new step('step_two', this),
+            new step('step_three', this),
+            new step('step_four', this),
+            new step('step_five', this),
+            new step('step_six', this),
+            new step('step_seven', this),
+            new step('step_eight', this)
         ];
     }
     //

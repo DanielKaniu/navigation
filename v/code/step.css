@@ -192,3 +192,25 @@ The class for each step in the translation stage. */
 .highlighted{
     background-color: yellow;
 }
+/*
+Styling for mobile devices. */
+@media only screen and (max-width: 600px) {
+    body {
+        font-weight: bolder;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        display: grid;
+        gap: 1.5px;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 10% 5% 40% 5% 5% 35%;
+        grid-template-areas:
+            "header header"
+            "steps_title ui_title"
+            "steps interactions"
+            "steps btns"
+            "collectable_title terms_title"
+            "collectable terms";
+    }
+}
